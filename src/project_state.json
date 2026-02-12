@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Create a landing page for DirectSell.AI that explains how users can use the AI to reach potential customers.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- DirectSell.AI wordmark logo, modern minimal typography on transparent background (directsellai-wordmark.dim_1200x300.png)\n- Abstract AI + outreach hero illustration with warm, modern palette, no text (directsellai-hero-illustration.dim_1600x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-landing-page-for-directsell-ai-that-clearly-explains-the-product-and-who-it-is-for-helping-users-reach-potential-customers-using-ai-using-english-for-all-user-facing-copy",
+      "title": "Create a responsive landing page for “DirectSell.AI” that clearly explains the product and who it is for (helping users reach potential customers using AI), using English for all user-facing copy.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-a-top-navigation-and-hero-section-with-product-name-directsell-ai-a-one-sentence-value-proposition-and-at-least-one-primary-call-to-action-button-e-g-get-started-see-how-it-works",
+      "title": "Include a top navigation and hero section with: product name (DirectSell.AI), a one-sentence value proposition, and at least one primary call-to-action button (e.g., “Get Started” / “See How It Works”).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-how-it-works-section-that-teaches-users-how-to-use-directsell-ai-to-reach-potential-customers-present-as-a-clear-step-by-step-flow-3-6-steps-with-short-descriptions-and-example-prompts-messages",
+      "title": "Add a “How it works” section that teaches users how to use DirectSell.AI to reach potential customers. Present as a clear step-by-step flow (3–6 steps) with short descriptions and example prompts/messages.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-supporting-sections-that-reinforce-the-product-story-a-key-benefits-features-3-6-items-b-use-cases-at-least-3-audience-scenarios-c-faq-at-least-4-questions-and-d-footer-with-basic-links-e-g-privacy-terms-placeholders-and-a-short-tagline",
+      "title": "Add supporting sections that reinforce the product story: (a) Key benefits/features (3–6 items), (b) Use cases (at least 3 audience scenarios), (c) FAQ (at least 4 questions), and (d) Footer with basic links (e.g., Privacy, Terms placeholders) and a short tagline.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-visual-theme-for-the-landing-page-colors-typography-spacing-and-component-styling-with-a-distinct-style-appropriate-for-an-ai-sales-outreach-product-enforce-it-consistently-across-all-sections-avoid-blue-purple-as-primary-brand-colors",
+      "title": "Apply a coherent visual theme for the landing page (colors, typography, spacing, and component styling) with a distinct style appropriate for an AI sales/outreach product; enforce it consistently across all sections (avoid blue/purple as primary brand colors).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-brand-visuals-to-the-landing-page-by-placing-them-in-frontend-public-assets-generated-and-using-them-in-the-hero-and-or-navigation-do-not-serve-images-from-the-backend",
+      "title": "Add generated static brand visuals to the landing page by placing them in frontend/public/assets/generated and using them in the hero and/or navigation (do not serve images from the backend).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design and build a landing page for DirectSell.AI, including instructions on how to use the AI to reach potential customers.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "DirectSell.AI",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

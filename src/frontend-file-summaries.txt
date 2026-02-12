@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that renders the LandingPage component.",
+  "frontend/src/components/landing/LandingPage.tsx": "Root landing page component that composes all sections (TopNav, Hero, HowItWorks, Features, UseCases, FAQ, Footer) into a single-page layout.",
+  "frontend/src/components/landing/TopNav.tsx": "Sticky navigation header with logo, smooth-scrolling section links, mobile menu, and CTA button.",
+  "frontend/src/components/landing/HeroSection.tsx": "Hero section featuring DirectSell.AI branding, value proposition, CTAs, and hero illustration with decorative gradients.",
+  "frontend/src/components/landing/HowItWorksSection.tsx": "Five-step process explanation with numbered cards and three copyable example prompts for customer outreach.",
+  "frontend/src/components/landing/FeaturesSection.tsx": "Grid of six feature cards highlighting AI personalization, targeting, multi-channel support, conversion optimization, speed, and audience insights.",
+  "frontend/src/components/landing/UseCasesSection.tsx": "Three use-case cards targeting solo founders, local service businesses, and B2B sales teams with specific benefits for each.",
+  "frontend/src/components/landing/FaqSection.tsx": "Accordion-based FAQ section with six common questions about DirectSell.AI functionality and usage.",
+  "frontend/src/components/landing/Footer.tsx": "Footer with branding, legal links, tagline, copyright, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/index.css": "Global styles with warm terracotta/coral OKLCH color palette for light and dark modes, avoiding blue/purple primaries.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Inter font family, custom shadows, and warm color tokens mapped from index.css.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks when backend methods are implemented."
+}

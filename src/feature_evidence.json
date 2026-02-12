@@ -1,0 +1,124 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-landing-page-for-directsell-ai-that-clearly-explains-the-product-and-who-it-is-for-helping-users-reach-potential-customers-using-ai-using-english-for-all-user-facing-copy",
+      "featureTitle": "Create a responsive landing page for “DirectSell.AI” that clearly explains the product and who it is for (helping users reach potential customers using AI), using English for all user-facing copy.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-include-a-top-navigation-and-hero-section-with-product-name-directsell-ai-a-one-sentence-value-proposition-and-at-least-one-primary-call-to-action-button-e-g-get-started-see-how-it-works",
+      "featureTitle": "Include a top navigation and hero section with: product name (DirectSell.AI), a one-sentence value proposition, and at least one primary call-to-action button (e.g., “Get Started” / “See How It Works”).",
+      "files": [
+        "frontend/src/components/landing/HeroSection.tsx",
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/components/landing/TopNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-how-it-works-section-that-teaches-users-how-to-use-directsell-ai-to-reach-potential-customers-present-as-a-clear-step-by-step-flow-3-6-steps-with-short-descriptions-and-example-prompts-messages",
+      "featureTitle": "Add a “How it works” section that teaches users how to use DirectSell.AI to reach potential customers. Present as a clear step-by-step flow (3–6 steps) with short descriptions and example prompts/messages.",
+      "files": [
+        "frontend/src/components/landing/HowItWorksSection.tsx",
+        "frontend/src/components/landing/LandingPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-supporting-sections-that-reinforce-the-product-story-a-key-benefits-features-3-6-items-b-use-cases-at-least-3-audience-scenarios-c-faq-at-least-4-questions-and-d-footer-with-basic-links-e-g-privacy-terms-placeholders-and-a-short-tagline",
+      "featureTitle": "Add supporting sections that reinforce the product story: (a) Key benefits/features (3–6 items), (b) Use cases (at least 3 audience scenarios), (c) FAQ (at least 4 questions), and (d) Footer with basic links (e.g., Privacy, Terms placeholders) and a short tagline.",
+      "files": [
+        "frontend/src/components/landing/FaqSection.tsx",
+        "frontend/src/components/landing/FeaturesSection.tsx",
+        "frontend/src/components/landing/Footer.tsx",
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/components/landing/UseCasesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-visual-theme-for-the-landing-page-colors-typography-spacing-and-component-styling-with-a-distinct-style-appropriate-for-an-ai-sales-outreach-product-enforce-it-consistently-across-all-sections-avoid-blue-purple-as-primary-brand-colors",
+      "featureTitle": "Apply a coherent visual theme for the landing page (colors, typography, spacing, and component styling) with a distinct style appropriate for an AI sales/outreach product; enforce it consistently across all sections (avoid blue/purple as primary brand colors).",
+      "files": [
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-generated-static-brand-visuals-to-the-landing-page-by-placing-them-in-frontend-public-assets-generated-and-using-them-in-the-hero-and-or-navigation-do-not-serve-images-from-the-backend",
+      "featureTitle": "Add generated static brand visuals to the landing page by placing them in frontend/public/assets/generated and using them in the hero and/or navigation (do not serve images from the backend).",
+      "files": [
+        "frontend/src/components/landing/HeroSection.tsx",
+        "frontend/src/components/landing/TopNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

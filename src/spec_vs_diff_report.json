@@ -1,0 +1,76 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T10:07:54.954Z",
+  "summary": "The diff implements a single-page DirectSell.AI marketing landing page composed of TopNav, Hero, How It Works (with steps + example prompts), Features, Use Cases, FAQ, and Footer, plus a warm (non-blue/purple) theme. However, there is no explicit evidence that the required generated image files were added under frontend/public/assets/generated, and the diff introduces backend/auth-related code that was out of scope and conflicts with the stated constraints/non-goals.",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Add generated static brand visuals by placing them in frontend/public/assets/generated and using them in the hero and/or navigation (do not serve images from the backend).",
+      "reason": "The landing page references the required image paths, but the diff summary does not show the image files being added under frontend/public/assets/generated (the only omitted added file is unspecified, so image presence cannot be confirmed from provided evidence).",
+      "evidence": [
+        "frontend/src/components/landing/TopNav.tsx",
+        "frontend/src/components/landing/HeroSection.tsx",
+        "frontend/src/components/landing/Footer.tsx",
+        "File diff summary: \"Omitted files due to limits: added=1\""
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend canister code added even though the request is for a marketing landing page and explicitly requires no backend involvement for assets.",
+      "reason": "BuildRequest focuses on a frontend single-page marketing landing experience and states assets must be served statically from the frontend; adding backend code is not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Internet Identity / authentication scaffolding present in the app composition (provider + hooks), despite 'no requirement for authentication' and explicit non-goals around Internet Identity flows, plus immutable-file constraints.",
+      "reason": "The app wraps the UI in InternetIdentityProvider and includes hooks related to identity/actors, which is outside the requested landing-page-only scope and conflicts with the stated non-goals/constraints.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Caffeine.ai attribution with UTM tracking added in the footer.",
+      "reason": "Footer requirements only mention basic placeholder links (Privacy/Terms) and a short tagline; third-party attribution/tracking was not requested.",
+      "evidence": [
+        "frontend/src/components/landing/Footer.tsx"
+      ]
+    },
+    {
+      "description": "React Query infrastructure and placeholder queries file added.",
+      "reason": "No data fetching or backend integration was requested for a static marketing landing page.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/landing/FaqSection.tsx",
+    "frontend/src/components/landing/FeaturesSection.tsx",
+    "frontend/src/components/landing/Footer.tsx",
+    "frontend/src/components/landing/HeroSection.tsx",
+    "frontend/src/components/landing/HowItWorksSection.tsx",
+    "frontend/src/components/landing/LandingPage.tsx",
+    "frontend/src/components/landing/TopNav.tsx",
+    "frontend/src/components/landing/UseCasesSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

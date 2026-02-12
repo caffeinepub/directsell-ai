@@ -1,0 +1,170 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "DirectSell.AI single-page marketing landing with How It Works",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a responsive, English-only single-page landing experience that explains DirectSell.AI and its target users.",
+      "acceptanceCriteria": [
+        "Visiting the app shows a single landing page (no placeholder/template content).",
+        "All headings, body text, buttons, and labels are written in English.",
+        "Layout is responsive and readable on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app’s single-page marketing layout and render the full landing content (hero, How it works, features, use cases, FAQ, footer) with English-only copy; ensure responsive section spacing/typography throughout."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "create",
+          "description": "Create a dedicated LandingPage component containing all landing sections (single-page) and responsive composition; use shadcn-ui primitives (e.g., Button/Card/Accordion where applicable) to avoid custom complex UI. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a top navigation and hero section with DirectSell.AI name, value proposition, and a primary CTA that scrolls to How It Works.",
+      "acceptanceCriteria": [
+        "Hero section includes DirectSell.AI name, a short value proposition, and a primary CTA button.",
+        "Top navigation includes links that scroll to page sections (e.g., How It Works, Features, FAQ).",
+        "CTA button scrolls to or focuses the “How It Works” section (or equivalent) on click."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/TopNav.tsx",
+          "operation": "create",
+          "description": "Create a sticky/top navigation with in-page anchor links (scroll-to-section behavior) for How It Works, Features, Use Cases, FAQ; include brand area for the logo/wordmark. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create the hero section with product name, one-sentence value proposition, and primary CTA button that scrolls/focuses the How It Works section; optionally include a secondary CTA (e.g., “View examples”). Use shadcn-ui Button for CTAs. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Wire TopNav and HeroSection into the page and ensure their links/CTA target the correct section ids (e.g., how-it-works) with smooth scrolling behavior."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build a clearly titled “How it works” section with a numbered 3–6 step flow and copyable outreach prompt examples.",
+      "acceptanceCriteria": [
+        "Section is explicitly titled (e.g., “How it works”).",
+        "Includes a numbered step flow with concise descriptions.",
+        "Includes at least 3 example prompts/messages a user could copy and adapt.",
+        "Examples are written in English and are relevant to customer outreach."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/HowItWorksSection.tsx",
+          "operation": "create",
+          "description": "Create the “How it works” section (with a stable id for navigation) showing a numbered step-by-step flow (3–6 steps) plus at least 3 English example prompts/messages for customer outreach; present examples in a scannable, copy-friendly UI using shadcn-ui components (e.g., Card/Button). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Insert HowItWorksSection after the hero and ensure the primary CTA and nav anchor links scroll to it."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add supporting story sections: key benefits/features, use cases, FAQ, and a footer with placeholder links and tagline.",
+      "acceptanceCriteria": [
+        "Features/benefits section lists 3–6 items with short explanatory text.",
+        "Use-cases section includes at least 3 distinct scenarios for reaching potential customers.",
+        "FAQ contains at least 4 Q&A items and is readable/scannable.",
+        "Footer is present and includes at least two placeholder links (Privacy/Terms) and a short tagline."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/FeaturesSection.tsx",
+          "operation": "create",
+          "description": "Create a Features/Benefits section listing 3–6 items with concise explanatory copy; use consistent card/icon styling via shadcn-ui Card where appropriate. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/UseCasesSection.tsx",
+          "operation": "create",
+          "description": "Create a Use Cases section with at least 3 distinct audience scenarios (e.g., solo founders, local services, B2B outbound) focused on reaching potential customers; keep copy English-only and scannable. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/FaqSection.tsx",
+          "operation": "create",
+          "description": "Create an FAQ section with at least 4 Q&A items; implement with shadcn-ui Accordion for readability and scanning. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/Footer.tsx",
+          "operation": "create",
+          "description": "Create a footer with a short English tagline and at least two placeholder links (Privacy, Terms) that do not require additional pages (e.g., non-navigating placeholders or in-page placeholders)."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Wire FeaturesSection, UseCasesSection, FaqSection, and Footer into the single landing page and ensure nav anchors include Features/FAQ sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Apply a consistent warm, modern visual theme (non-blue/purple primary) across typography, spacing, and component styling.",
+      "acceptanceCriteria": [
+        "A consistent color palette and typography scale are used across the page.",
+        "Buttons, cards, and section headers share consistent styling.",
+        "Primary brand colors are not predominantly blue/purple."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global theme tokens/CSS variables and base styles used by Tailwind/shadcn-ui (including a warm primary color such as amber/orange/terracotta and complementary neutrals), ensuring consistent typography and spacing across all landing sections."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions (as needed) to support the landing page’s warm brand palette and consistent section typography/spacing utilities while avoiding blue/purple as primary brand colors."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Apply consistent section wrappers, headings, card/button variants, and spacing conventions across all sections; use shadcn-ui components for consistent styling. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add and reference generated static brand images from frontend/public/assets/generated in navigation and hero (no backend serving).",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated.",
+        "Landing page references these images via static paths.",
+        "No backend code is added to fetch/serve these assets."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/directsellai-wordmark.dim_1200x300.png",
+          "operation": "create",
+          "description": "Add the generated DirectSell.AI wordmark asset at frontend/public/assets/generated/directsellai-wordmark.dim_1200x300.png so it can be referenced as a static public file."
+        },
+        {
+          "path": "frontend/public/assets/generated/directsellai-hero-illustration.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero illustration asset at frontend/public/assets/generated/directsellai-hero-illustration.dim_1600x900.png so it can be referenced as a static public file."
+        },
+        {
+          "path": "frontend/src/components/landing/TopNav.tsx",
+          "operation": "modify",
+          "description": "Reference the static wordmark image from frontend/public/assets/generated/directsellai-wordmark.dim_1200x300.png in the navigation brand area; ensure it scales responsively. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Reference the static hero illustration from frontend/public/assets/generated/directsellai-hero-illustration.dim_1600x900.png in the hero layout; ensure responsive behavior and good contrast with the warm theme. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

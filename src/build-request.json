@@ -1,0 +1,126 @@
+{
+  "kind": "build_request",
+  "title": "DirectSell.AI marketing landing page with “How it works” guidance",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive landing page for “DirectSell.AI” that clearly explains the product and who it is for (helping users reach potential customers using AI), using English for all user-facing copy.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create a landing page for DirectSell.AI and users how to use the AI to help them to reach the potential customers"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting the app shows a single landing page (no placeholder/template content).",
+        "All headings, body text, buttons, and labels are written in English.",
+        "Layout is responsive and readable on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Include a top navigation and hero section with: product name (DirectSell.AI), a one-sentence value proposition, and at least one primary call-to-action button (e.g., “Get Started” / “See How It Works”).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create a landing page for DirectSell.AI"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section includes DirectSell.AI name, a short value proposition, and a primary CTA button.",
+        "Top navigation includes links that scroll to page sections (e.g., How It Works, Features, FAQ).",
+        "CTA button scrolls to or focuses the “How It Works” section (or equivalent) on click."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a “How it works” section that teaches users how to use DirectSell.AI to reach potential customers. Present as a clear step-by-step flow (3–6 steps) with short descriptions and example prompts/messages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "users how to use the AI to help them to reach the potential customers"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section is explicitly titled (e.g., “How it works”).",
+        "Includes a numbered step flow with concise descriptions.",
+        "Includes at least 3 example prompts/messages a user could copy and adapt.",
+        "Examples are written in English and are relevant to customer outreach."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add supporting sections that reinforce the product story: (a) Key benefits/features (3–6 items), (b) Use cases (at least 3 audience scenarios), (c) FAQ (at least 4 questions), and (d) Footer with basic links (e.g., Privacy, Terms placeholders) and a short tagline.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Features/benefits section lists 3–6 items with short explanatory text.",
+        "Use-cases section includes at least 3 distinct scenarios for reaching potential customers.",
+        "FAQ contains at least 4 Q&A items and is readable/scannable.",
+        "Footer is present and includes at least two placeholder links (Privacy/Terms) and a short tagline."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a coherent visual theme for the landing page (colors, typography, spacing, and component styling) with a distinct style appropriate for an AI sales/outreach product; enforce it consistently across all sections (avoid blue/purple as primary brand colors).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent color palette and typography scale are used across the page.",
+        "Buttons, cards, and section headers share consistent styling.",
+        "Primary brand colors are not predominantly blue/purple."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add generated static brand visuals to the landing page by placing them in frontend/public/assets/generated and using them in the hero and/or navigation (do not serve images from the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated.",
+        "Landing page references these images via static paths.",
+        "No backend code is added to fetch/serve these assets."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (compose them instead).",
+    "Do not modify files listed as immutable: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Keep the app as a single-page marketing landing experience (no requirement for authentication)."
+  ],
+  "nonGoals": [
+    "Implementing Internet Identity authentication flows.",
+    "Building a dashboard or multi-page onboarding wizard.",
+    "Integrating third-party CRM/email tools or external APIs.",
+    "Capturing payments/subscriptions."
+  ],
+  "imageRequirements": {
+    "required": [
+      "DirectSell.AI wordmark logo, modern minimal typography on transparent background (directsellai-wordmark.dim_1200x300.png)",
+      "Abstract AI + outreach hero illustration with warm, modern palette, no text (directsellai-hero-illustration.dim_1600x900.png)"
+    ],
+    "edits": []
+  }
+}
